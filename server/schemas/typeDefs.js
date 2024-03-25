@@ -5,13 +5,14 @@ const typeDefs = gql`
         _id: ID
         reviewText: String
         reviewAuthor: String
+        rating: Int
         createdAt: String
     }
     type Query {
         reviews: [Review]
     }
     type Mutation {
-        addReview(reviewText: String!, reviewAuthor: String!): Review
+        addReview(reviewText: String!, reviewAuthor: String!, rating: Int!): Review
     }
 `;
 

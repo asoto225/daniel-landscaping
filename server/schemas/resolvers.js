@@ -8,8 +8,8 @@ const resolvers = {
     },
 
     Mutation: {
-        addReview: async (parent, { reviewText, reviewAuthor }) => {
-            return Review.create({ reviewText, reviewAuthor });
+        addReview: async (parent, { reviewText, reviewAuthor, rating }) => {
+            return Review.create({ reviewText, reviewAuthor, rating });
         }
     }
 
