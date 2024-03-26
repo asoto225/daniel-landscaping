@@ -4,7 +4,7 @@ import landscaping from "../assets/landscaping.jpeg";
 
 const Home = () => {
     return (
-        <div>
+        <div className="main-content">
             <div>
                 <h1>Daniel & Son's Landscaping</h1>
                 <img src={landscaping} alt="landscaping Tucson, Arizona lawncare" />

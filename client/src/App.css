@@ -1,47 +1,95 @@
 /* need to adjust root */
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 /* Nav bar styling */
-nav {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  background-color: black;
-  padding: 0.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
+.nav-links li {
+  display: inline;
   margin-right: 1rem;
 }
 
-nav ul li ::before {
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #f00;
+}
+
+.nav-links li a.active {
+  color: #ff0;
+  text-decoration: underline;
+}
+
+.nav-links li ::before {
   content: '|';
   margin-right: 1rem;
 }
 
-nav ul li :hover {
-  color: red;
+/* main content styling */
+.main-content {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-nav ul li :active {
-  color: blue;
-  text-decoration: underline;
+/* review styling */
+.review-content {
+  margin-top: 75px;
 }
-
-nav a {
-  text-decoration: underline;
-  color: green;
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
-
-
+.reviews {
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  z-index: -1;
+}

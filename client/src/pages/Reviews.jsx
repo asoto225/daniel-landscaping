@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Reviews() {
     return (
-        <div>
+        <div className="review-content">
             <ReviewList />
             <div>
                 <p>Want to review our services? Add a new review here!</p>

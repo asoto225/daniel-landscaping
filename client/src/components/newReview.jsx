@@ -69,15 +69,14 @@ const NewReview = () => {
                 />
                 Your Name:
                 <input 
-                    type="textarea"
+                    type="text"
                     name="reviewAuthor"
                     placeholder="Your name"
                     value={review.reviewAuthor} 
                     onChange={handleChange}
                 />
                 Your Review:
-                <input 
-                    type="text"
+                <textarea 
                     name="reviewText"
                     placeholder="Please leave your review here"
                     value={review.reviewText} 
