@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import LeaveReview from './pages/LeaveReview.jsx'
 import Reviews from './pages/Reviews.jsx'
 import Contact from './pages/Contact.jsx'
+import Services from './pages/Services.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/services',
+        element: <Services />,
       }
     ]
   },

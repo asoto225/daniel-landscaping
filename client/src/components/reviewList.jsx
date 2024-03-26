@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ReactStars from "react-stars";
 import { useQuery } from "@apollo/client";
 import { QUERY_REVIEWS } from "../utils/query";
 
@@ -23,7 +24,16 @@ const ReviewList = () => {
             <ul>
                 {sortedReviews.map((review) => (
                     <li key={review._id}>
-                        <p>Rating: {review.rating}</p>
+                        <p>Rating:
+                            <ReactStars
+                                count={5}
+                                value={review.rating}
+                                edit={false}
+                                size={24}
+                                color1={'black'}
+                                color2={'#ffd700'}
+                            />
+                        </p>
                         <p>{review.reviewText}</p>
                         <p>Author: {review.reviewAuthor}</p>
                     </li>

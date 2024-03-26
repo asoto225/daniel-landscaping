@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 import './App.css'
 import { Outlet } from 'react-router-dom';
 import NavBar from './components/navBar.jsx';
+import Footer from './components/footer.jsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -20,6 +21,7 @@ function App() {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </ApolloProvider>
   )
 }
