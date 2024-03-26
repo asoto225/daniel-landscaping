@@ -9,7 +9,7 @@ const typeDefs = gql`
         createdAt: String
     }
     type Query {
-        reviews: [Review]
+        reviews(limit: Int, offset: Int, randomize: Boolean): [Review]
     }
     type Mutation {
         addReview(reviewText: String!, reviewAuthor: String!, rating: Int!): Review

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactStars from "react-stars";
 import { useQuery } from "@apollo/client";
 import { QUERY_REVIEWS } from "../utils/query";
@@ -11,7 +11,10 @@ const shuffleArray = (array) => {
     return array;
 }
 
+// const ReviewsPerPage = 5;
+
 const TopReviewList = () => {
+    // const [currentPage, setCurrentPage] = useState(1);
     const { loading, data, refetch } = useQuery(QUERY_REVIEWS);
     useEffect(() => {
         refetch();
@@ -22,8 +25,8 @@ const TopReviewList = () => {
     }
     //pulls the reviews from the data object and places them in a new array so they can be sorted. 
     const reviews = [...data.reviews]
-     //shuffles the sorted array
-     const shuffledReviews = shuffleArray(reviews);
+    //shuffles the sorted array
+    const shuffledReviews = shuffleArray(reviews);
     //sorts reviews by rating in descending order
     const sortedReviews = shuffledReviews.sort((a, b) => b.rating - a.rating);
     //pulls the top 3 reviews from the sorted array
