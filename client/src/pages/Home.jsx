@@ -1,15 +1,21 @@
 import React from "react"; 
 import NewReview from "../components/newReview";
-import ReviewList from "../components/reviewList";
+import TopReviewList from "../components/topReviews";
+import landscaping from "../assets/landscaping.jpeg";
 
-export default function Home() {
+const Home = () => {
     return (
         <div>
             <div>
                 <h1>Home</h1>
+                <img src={landscaping} alt="landscaping Tucson, Arizona" />
+                <p>"Where quality and value mean something"</p>
             </div>
-        <ReviewList />
+        <TopReviewList />
+
         <NewReview />
         </div>      
     );
 }
+
+export default Home;

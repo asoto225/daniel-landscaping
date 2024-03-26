@@ -1,8 +1,8 @@
 import React from 'react'
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client'
 import './App.css'
-import ReviewRate from './components/newReview.jsx'
 import { Outlet } from 'react-router-dom';
+import NavBar from './components/navBar.jsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -16,6 +16,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <NavBar />
       <div>
         <Outlet />
       </div>

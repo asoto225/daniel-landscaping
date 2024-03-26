@@ -5,17 +5,35 @@ const dateFormat = require('../utils/dateFormat');
 const reviewSchema = new Schema({
     reviewText: {
         type: String,
-        required: 'You need to leave a review!',
-        minlength: 1,
-        maxlength: 280
+        required: true,
+        trim: true,
+        validate: {
+            validator: function(value) {
+                return value.length > 0;
+            },
+            message: 'Review text cannot be empty.'
+        },
+        minlength: 1
     },
     reviewAuthor: {
         type: String,
-        required: true
+        required: true,
+        validate: {
+            validator: function(value) {
+                return value.length > 0;
+            },
+            message: 'Review author cannot be empty.'
+        }
     },
     rating: {
         type: Number,
-        required: true
+        required: true,
+        validate: {
+            validator: function(value) {
+                return value > 0;
+            },
+            message: 'Rating must be greater than zero.'
+        }
     },
     createdAt: {
         type: Date,

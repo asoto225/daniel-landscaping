@@ -40,9 +40,9 @@ const NewReview = () => {
                 rating: 0
             });
         }
-        catch (err) {
-            console.error(err);
-            window.alert('Something went wrong. Please try again.');
+        catch (error) {
+            console.error(error);
+            window.alert("Please enter a rating and ensure all fields are filled out before submitting.");
         };
     }
 
@@ -56,7 +56,7 @@ const NewReview = () => {
 
     return (
         <div>
-            <h1>Rate this:</h1>
+            {/* <h1>Rate this:</h1> */}
             <form onSubmit={handleFormSubmit} className="form-group">
                 <ReactStars
                     name="rating" // Name of the form field

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_REVIEWS } from "../utils/query";
 
-const ReviewList = () => {
+const TopReviewList = () => {
     const { loading, data, refetch } = useQuery(QUERY_REVIEWS);
     useEffect(() => {
         refetch();
@@ -21,7 +21,7 @@ const ReviewList = () => {
         <div>
             <h1>Reviews</h1>
             <ul>
-                {sortedReviews.map((review) => (
+                {topReviews.map((review) => (
                     <li key={review._id}>
                         <p>Rating: {review.rating}</p>
                         <p>{review.reviewText}</p>
@@ -33,4 +33,4 @@ const ReviewList = () => {
     )
 };
 
-export default ReviewList;
+export default TopReviewList;
