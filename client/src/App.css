@@ -1,8 +1,8 @@
 /* need to adjust root */
 #root {
   /* max-width: 1280px; */
-  margin: 0 auto;
-  padding: 2rem;
+  margin-top: 50px;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -11,7 +11,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  /* width: 100%; */
   background-color: #333;
   color: #fff;
   padding: 1rem;
@@ -22,8 +23,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px; */
+  margin: 0;
 }
 
 .nav-links {
@@ -48,6 +49,7 @@
 
 .nav-links li a:hover {
   color: #f00;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a.active {
@@ -58,6 +60,32 @@
 .nav-links li ::before {
   content: '|';
   margin-right: 1rem;
+}
+
+.nav-icons {
+  position: fixed;
+  list-style: none;
+  float: right;
+  top: 24px;
+  right: 0;
+  padding-right: 20px;
+}
+.nav-icons li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.nav-icons li a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-icons li a:hover {
+  /* invert color if desired */
+  /* filter: invert(100%);  */
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 /* main content styling */
@@ -92,4 +120,48 @@
   text-align: left;
   width: 100%;
   z-index: -1;
+}
+
+/* footer styling */
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0 15px 0 0;
+  list-style: none;
+}
+
+
+.footer li {
+  display: inline;
+  margin-right: 1rem;
+  list-style: none;
+}
+
+.footer li ::before {
+  content: '|';
+  margin-right: 1rem;
+}
+
+.footer li a {
+  color: #fff;
+}
+
+.footer li a:hover {
+  color: yellow;
+  transition: color 0.3s ease;
 }

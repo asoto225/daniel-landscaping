@@ -8,6 +8,7 @@ import LeaveReview from './pages/LeaveReview.jsx'
 import Reviews from './pages/Reviews.jsx'
 import Contact from './pages/Contact.jsx'
 import Services from './pages/Services.jsx'
+import Gallery from './pages/Gallery.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services />,
+      },
+      {
+        path: '/gallery',
+        element: <Gallery />,
       }
     ]
   },

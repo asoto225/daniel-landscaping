@@ -11,11 +11,13 @@ const Footer = () => {
     const instagramLink = "https://www.instagram.com/danielandsons520/"
     return (
         <div>
-            <footer>
+            <footer className="footer">
                 <p>© 2024 Daniel & Son's Landscaping. All Rights Reserved.</p>
-                <Link to='/contact'>Contact Us</Link> |
-                <Link to={facebookLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></Link> |
-                <Link to={instagramLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram}/></Link> |
+                <ul>
+                <li><Link to='/contact' className="footer-links">Contact Us</Link></li>
+                <li><Link to={facebookLink} target="_blank" rel="noopener noreferrer" className="footer-links"><FontAwesomeIcon icon={faFacebook} size="lg"/></Link> </li>
+                <li><Link to={instagramLink} target="_blank" rel="noopener noreferrer" className="footer-links"><FontAwesomeIcon icon={faInstagram} size="lg"/></Link> </li>
+                </ul>
             </footer>
         </div>
     );
